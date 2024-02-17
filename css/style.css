@@ -339,6 +339,7 @@ body {
   right: 5.2vw;
   width: 10rem;
   height: 2.5rem;
+  z-index: 8;
 }
 .successful-copied {
   visibility: visible;
