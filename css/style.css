@@ -1,4 +1,4 @@
-/* ********** Custom Properties ********** */
+/* ********** Custom Properties 12px********** */
 :root {
   --black-color: #000;
   --text-color: #c9c1c1;
@@ -24,13 +24,14 @@ body {
   margin: 0;
   background-color: var(--black-color);
   color: var(--text-color);
+  overflow: hidden;
 }
 /* scrollbar */
 ::-webkit-scrollbar {
   width: 0.5em;
 }
 ::-webkit-scrollbar-track {
-  background-color: none;
+  background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -78,7 +79,7 @@ body {
 .main {
   position: absolute;
   bottom: 0;
-  height: 92vh;
+  height: 92%;
   width: 100%;
   display: flex;
   flex-direction: column-reverse;
@@ -87,11 +88,12 @@ body {
 /* content principal*/
 /** main-content **/
 .main-content {
-  display: inherit;
+  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  height: 85vh;
+  height: 95%;
+  z-index: 1;
 }
 @media screen and (min-width: 64em) {
   .main {
@@ -165,11 +167,12 @@ body {
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  height: 3rem;
+  height: 5rem;
   border-bottom: thin solid var(--border-color);
   z-index: 9;
 }
 .search-container {
+  height: 3rem;
   width: 90%;
   display: flex;
   align-items: center;
@@ -186,7 +189,6 @@ body {
 }
 .input-search {
   width: 100%;
-  height: 5rem;
   background-color: transparent;
   border: none;
   outline: none;
@@ -201,6 +203,7 @@ body {
   display: flex;
   justify-content: center;
   scrollbar-gutter: stable;
+  z-index: 2;
 }
 /* grid 1*6 */
 .result-grid {
@@ -213,7 +216,8 @@ body {
   grid-template-rows: auto;
   gap: 1rem;
   font-family: var(--font);
-  overflow-y: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 .result-footer {
   width: 100%;
