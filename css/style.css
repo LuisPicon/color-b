@@ -57,8 +57,8 @@ body {
   width: 100%;
 }
 .header-container img {
-  width: 5.5rem;
-  height: 2.5rem;
+  width: 5rem;
+  height: 2rem;
 }
 .header-container-networks a {
   text-decoration: none;
@@ -73,6 +73,10 @@ body {
   }
   .header-container {
     width: 97%;
+  }
+  .header-container img {
+    width: 5.5rem;
+    height: 2.5rem;
   }
 }
 /** main **/
@@ -208,9 +212,8 @@ body {
 /* grid 1*6 */
 .result-grid {
   z-index: 1;
-  padding-left: 1rem;
-  padding-right: 1rem;
   padding-bottom: 2.5rem;
+  padding-right: 0.5rem;
   display: grid;
   grid-template-columns: repeat(1, 300px);
   grid-template-rows: auto;
